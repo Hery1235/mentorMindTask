@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { createAssignment } from "../api/classDetail";
+import ButtonNavigate from "../components/ButtonNavigate";
 
 export const CreateAssignment = () => {
   const { id: classId } = useParams();
@@ -36,6 +37,7 @@ export const CreateAssignment = () => {
 
   return (
     <div className="p-6 max-w-lg mx-auto">
+      <ButtonNavigate text="Discard" url="http://localhost:5173/classes" />
       <h1 className="text-3xl font-bold mb-6">Create Assignment</h1>
 
       {error && <div className="text-red-500 mb-4">{error}</div>}

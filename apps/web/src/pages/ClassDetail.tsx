@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { getRoster, getMetrics } from "../api/classDetail";
 import { Link } from "react-router-dom";
+import ButtonNavigate from "../components/ButtonNavigate";
 
 export const ClassDetail = () => {
   const { id } = useParams();
@@ -33,14 +34,13 @@ export const ClassDetail = () => {
 
   return (
     <div className="p-6">
-      <h1 className="text-3xl font-bold mb-6">Class Details</h1>
+      <ButtonNavigate text="Back" url="http://localhost:5173/classes/" />
+      <h1 className="text-3xl font-bold mb-6 mt-6">Class Details</h1>
 
       <div className="bg-white p-5 rounded-xl shadow-md mb-6">
         <h2 className="text-xl font-semibold mb-2">Class Summary</h2>
         <p className="text-gray-600">Overview of student performance.</p>
       </div>
-
-      <h2 className="text-2xl font-semibold mb-4">Student Metrics</h2>
 
       <div className="overflow-x-auto">
         <div className="flex justify-between items-center mb-4">

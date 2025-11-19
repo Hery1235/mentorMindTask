@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { getClasses } from "../api/classes";
 import { Link } from "react-router-dom";
-import ClassesPageHeader from "../components/LogoutButton";
+import ButtonNavigate from "../components/ButtonNavigate";
 
 export const Classes = () => {
   const { data, isLoading, isError } = useQuery({
@@ -25,10 +25,9 @@ export const Classes = () => {
 
   return (
     <div className="p-6">
-      <ClassesPageHeader />
-      <h1 className="text-3xl font-bold mb-6">My Classes</h1>
+      <ButtonNavigate text="Logout" url="logout" />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {data.map((cls: any) => (
           <Link
             key={cls.id}

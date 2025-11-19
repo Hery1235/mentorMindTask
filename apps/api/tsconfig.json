@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "nodenext",
+    "target": "esnext",
+    "strict": true,
+    "jsx": "react-jsx",
+    "sourceMap": false,
+    "declaration": false,
+    "declarationMap": false,
+    "skipLibCheck": true
+  }
+}
